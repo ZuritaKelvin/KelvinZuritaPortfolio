@@ -62,13 +62,13 @@ const TAGS = {
 const PROJECTS = [
     {
         title: 'AuraBill',
-        description: 'Aplicación web para la administración y gestión de facturación con implementación de IA para la digitalización y generación automatizada de facturas.',
-        updateNote: 'Actualización · 1 de julio de 2026: estoy trabajando para convertir AuraBill en una app para Windows que funcione en local, sin necesidad de conexión a internet, con exportación/importación de datos entre dispositivos y opciones para compartirlos en red local.',
+        description: 'Aplicación de escritorio (Windows) para la administración y gestión de facturas y clientes \n- Gestion de facturas/clientes\n- Importacion/Exportacion de datos entre dispositivos\n- Sincronizacion de datos en local',
+        updateNote: null,
         link: null,
-        github: null,
-        image: null,
+        github: 'https://github.com/ZuritaKelvin/AuraBill',
+        image: '/projects/AuraBill.png',
         tags: [TAGS.SHADCN, TAGS.VITE, TAGS.SQLITE, TAGS.TAURI, TAGS.RUST],
-        inProgress: true,
+        inProgress: false,
     },
     {
         title: 'Clon de MonkeyType',
@@ -101,11 +101,11 @@ const PROJECTS = [
                                 </span>
                             )}
                         </h3>
-                        <p class="mt-2 text-sm leading-relaxed text-zinc-400">
+                        <p class="mt-2 whitespace-pre-line text-sm leading-relaxed text-zinc-400">
                             {project.description}
                         </p>
                         {project.updateNote && (
-                            <p class="mt-3 rounded-xl border border-blue-400/20 bg-blue-400/10 px-4 py-3 text-sm leading-relaxed text-blue-100">
+                            <p class="mt-3 whitespace-pre-line rounded-xl border border-blue-400/20 bg-blue-400/10 px-4 py-3 text-sm leading-relaxed text-blue-100">
                                 {project.updateNote}
                             </p>
                         )}
@@ -145,9 +145,9 @@ const PROJECTS = [
                                 />
                             </div>
                         )}
-                        <footer class="flex gap-3">
+                        <footer class="flex gap-3 align-middle items-center text-center">
                             {project.link && (
-                                <LinkButton href={project.link} target="_blank">
+                                <LinkButton href={project.link} target="_blank" >
                                     <PreviewIcon />
                                     Ver demo
                                 </LinkButton>
@@ -155,7 +155,7 @@ const PROJECTS = [
                             {project.github && (
                                 <LinkButton href={project.github} target="_blank">
                                     <Github />
-                                    Código fuente
+                                    Github
                                 </LinkButton>
                             )}
                         </footer>
